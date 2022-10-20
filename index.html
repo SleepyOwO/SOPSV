@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С.О.П.В.С.</title>
+    <style>
+        h1{
+            font-size: 2.6vw;
+            margin-left: 2vw;
+            color: rgb(7, 55, 99);
+            font-family: 'Comfortaa';
+        }
+        header{
+            z-index: 1;
+            margin-top: -2.6vh;
+            margin-left: -0.5vw;
+            width: 99vw;
+            height: 55vh;
+            background-size: cover;
+            background-image: url("https://lh5.googleusercontent.com/D8mSFZ61KdYnAPKUben1K_xZ2zAeoPAx-FJyvAT_56wM9rHV4dqr62Hw4wb0Xzg_6Vaj7S8NWNeAfJapcyiQ66g=w16383"); ;
+            transform: translate3d(0px, 0px, 0px);
+            background-position: center center;
+        }
+        a{
+            float: right;
+            margin-top: 1vw;
+            margin-right: 1vw;
+            text-decoration: none;
+            font-size: 1.6vw;
+            color: black;
+        }
+        .log{
+            float: left;
+            font-size: 1.6vw;
+            margin-top: auto;
+            margin-top: 1vw;
+            margin-left: 1vw;
+        }
+        .log:hover{
+            cursor: pointer;
+            color: rgb(7, 55, 99);
+        }
+        .logw{
+            padding: 1vw;
+            margin: auto;
+            text-align: left;
+            font-size: 2vw;
+            width: 40vw;
+            background-color: rgb(234, 234, 234);
+        }
+        .frm{
+            background: rgba(0, 0, 0, 0.7);
+            visibility: hidden;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+        }
+        section{
+            width: fit-content;
+        }
+        .main{
+            font-size: 3vw;
+            text-align: center;
+            margin: auto;
+            width: fit-content;
+            padding-top: 10vw;
+            padding-bottom: 10vw;
+        }
+        .rule{
+            font-size: 2vw;
+            margin-left: 2.3vw;
+        }
+    </style>
+    <script>
+        function log(){
+            document.querySelector(".frm").style.visibility='visible'
+            document.querySelector(".frm").style.zIndex='99999'
+        }
+        function logout(){
+            document.querySelector(".frm").style.visibility='hidden'
+            document.querySelector(".frm").style.zIndex='-2'
+
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2><a>О нас</a> <a href="#1">Правила сайта</a> <a href="#2">Ваши контакты</a></h2>
+            <h2 class="log" onclick="log()">Войти</h2>
+        </nav>
+        <p class="main">С ответом по всему свету</p>
+    </header>
+    <section class="frm">
+        <form class="logw">
+            <fieldset>
+                <legend>Введите логин и пароль</legend>
+                <p><label for="email">E-mail<em>* </em></label><input type="email" id="email"></p>
+                <p><label for="pass">Password<em>* </em></label><input type="text" id="pass"></p>
+            </fieldset>
+            <p><input type="submit" value="Отправить" onclick="logout()" style="top: 0;right: 0px;width: 8vw;height: 2vw;border: none;background: rgb(7, 62, 112); color:white; border-radius: 5px 5px 5px 5px;cursor: pointer; font-size: large;"></p>
+        </form>
+    </section>
+    <section id="1">
+        <h1>Правила сайта</h1>
+        <p class="rule">
+            1. Соблюдения норм поведения в сети интернет <br>
+            2. Предоставление достоверной информации о себе <br>
+            3. Соблюдать корректность запроса <br>
+            4. Запрет на обсуждение острых политических тем
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h1>Поиск</h1>
+        <p><input type="search" style="width: 40vw; height: 4vh; margin-left: 4vw; font-size: large;" placeholder="Искать здесь..."><input type="submit" value="найти" style="top: 0;right: 0px;width: 5vw;height: 2vw;border: none;background: rgb(7, 62, 112); color:white; border-radius: 0 5px 5px 0;cursor: pointer; font-size: large;"></p>
+        <p style="font-size: 1.7vw; margin-left:2.3vw; color: rgb(99, 98, 98)">Инструкции по поиску:<br>
+            1. Введите свой Запрос который соответствует нормам морали действующие в вашей стране<br>
+            2. Запрос может включать в себя: от получения информации о товаре и услуге, до реализации бизнес-идеи.
+        </p>
+    </section>
+    <hr>
+    <section id="2">
+        <form style="font-size: 1.7vw; margin-left:2.3vw;width:40vw">
+            <fieldset>
+                <legend style="color: rgb(7, 55, 99); font-size: 2vw;">Введите свои данные <sub style="color: rgb(99, 98, 98);font-size: 1vw;">По вашему усмотрению</sub></legend>
+                <p><label for="fio">ФИО<em>* </em></label><input type="text" placeholder="Иванов Иван Иванович" id="fio"></p>
+                <p><label for="spec">Специальность<em> </em></label><input type="text" id="spec"></p>
+                <p><label for="tel">Номер телефона<em> </em></label><input type="tel" placeholder="+7 777 777 77-77" id="tel"></p>
+                <p><label for="vk">Адрес страницы VK<em> </em></label><input type="url" id="vk"></p>
+            </fieldset>
+            <p><input type="submit" value="Отправить" style="top: 0;right: 0px;width: 8vw;height: 2vw;border: none;background: rgb(7, 62, 112); color:white; border-radius: 5px 5px 5px 5px;cursor: pointer; font-size: large;"></p>
+        </form>
+    </section>
+    <hr>
+    <section>
+        <h1>Связь с нами</h1>
+        <p class="rule">
+            <b>Основатель проекта</b><br>
+            Чекушин Никита Сергеевич <sub>Тел. +7 927 388-51-80</sub><br><br>
+            <b>Адрес организации</b><br>
+            Ул. Ладожская 139, кв. 164, п. 5
+        </p>
+    </section>
+
+</body>
+</html>
